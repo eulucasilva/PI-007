@@ -5,17 +5,17 @@ using namespace std;
 
 int main(){
 
-    int num, ultimo=1, penult=0, aux=0;
+    int num, ultimo=1, penult=0, prox=0;
 
     cout << "Digite um numero inteiro: " << endl;
     cin >> num;
 
-    cout << penult << endl << ultimo << endl;
-    for(int i=3; i<=num; i++){
-        cout << (penult + ultimo) << endl;
-        aux = penult;
+    cout << "Sequencia de Fibonacci ate " << num << endl;
+    while (penult <= num){
+        cout << penult << endl;
+        prox = penult+ultimo;
         penult = ultimo;
-        ultimo = ultimo + aux;
+        ultimo = prox;
     }
     
     return 0;
